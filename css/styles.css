@@ -15,11 +15,15 @@ body{
 }
 #quantity-form{
     margin: 0 auto;
-    width: 300px;
+    width: 250px;
     box-shadow: 0 0 3px;
+}
+#quantity{
+    text-align: center;
 }
 
 #password{
+    cursor: pointer;
     width: 450px;
     margin: 0 auto;
     box-shadow: 0 0 10px;

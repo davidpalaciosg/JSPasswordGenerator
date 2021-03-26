@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <!-- Required meta tags -->
@@ -29,40 +29,39 @@
             <form class="formulario">
                 <div class="col-sm">
                     <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="numeros">
+                        <input type="checkbox" class="form-check-input" id="numbers">
                         <label class="form-check-label" for="numeros">Numbers [0-9]</label>
                     </div>
                 </div>
                 <div class="col-sm">
                     <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="minusculas">
+                        <input type="checkbox" class="form-check-input" id="lowercase">
                         <label class="form-check-label" for="minusculas">Lowercase letters [a-z]</label>
                     </div>
                 </div>
                 <div class="col-sm">
                     <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="mayusculas">
+                        <input type="checkbox" class="form-check-input" id="uppercase">
                         <label class="form-check-label" for="mayusculas">Uppercase letters [A-Z]</label>
                     </div>
                 </div>
                 <div class="col-sm">
                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="special">
-                        <label class="form-check-label" for="special">Special characters [!@#$%^&*()?/]</label>
+                        <label class="form-check-label" for="special">Special characters [!@#$%^&*()?]</label>
                     </div>
                 </div>
                 <div class="col-sm">
                     <div class="form-floating mb-3" id="quantity-form">
-                        <input type="number" min="8" class="form-control" id="quantity"
-                            placeholder="Characters quantity" required>
+                        <input type="number" min="8" class="form-control" id="quantity" value=8 required>
                         <label for="quantity">Characters quantity</label>
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" id="send-button" class="btn btn-primary">Submit</button>
             </form>
         </div>
-        
+
         <br>
         <!-- Password -->
         <div class="row" id="password-div">
@@ -70,7 +69,7 @@
             <h1 class="display-6 text-center">Password</h1>
             <p></p>
             <p></p>
-            <input class="form-control" id="password" type="text"readonly>
+            <input class="form-control" id="password" type="text" readonly>
         </div>
         <p></p>
         <br><br>
@@ -78,17 +77,18 @@
         <!-- Footer -->
         <div class="card text-center">
             <div class="card-header">
-              About me
+                About me
             </div>
             <div class="card-body">
-              <h5 class="card-title">Project done by: David Palacios García</h5>
-              <a href="https://github.com/davidpalaciosg/JSCalculator"target="_blank" class="btn btn-secondary">Github repository</a>
-              <a href="https://davidpalaciosg.com/" target="_blank" class="btn btn-secondary">Web Page</a>
+                <h5 class="card-title">Project done by: David Palacios García</h5>
+                <a href="https://github.com/davidpalaciosg/JSCalculator" target="_blank"
+                    class="btn btn-secondary">Github repository</a>
+                <a href="https://davidpalaciosg.com/" target="_blank" class="btn btn-secondary">Web Page</a>
             </div>
             <div class="card-footer text-muted">
-              Copyright 2021 | David Palacios
+                Copyright 2021 | David Palacios
             </div>
-          </div>
+        </div>
 
     </div>
 
@@ -101,6 +101,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
         crossorigin="anonymous"></script>
+
+    <!-- jQuery Install -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
