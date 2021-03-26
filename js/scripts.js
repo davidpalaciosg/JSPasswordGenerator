@@ -4,8 +4,8 @@ $(document).ready(function () {
     const lowercase = "abcdefghijklmnopqrstuwvxyz";
     const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const special = "!@&#)(%^*?";
-
-
+    
+    //CLICK ON SUBMIT
     $("#send-button").click(function (e) {
         e.preventDefault();
         var string = "";
@@ -39,7 +39,11 @@ $(document).ready(function () {
             //Build password
             let password = buildPassword(string, quantity);
             //Show password
+            $("#password-div").css("display", "block");
             $("#password").val(password);
+        }
+        else{
+            alert("Select at least one option!");
         }
     });
 
@@ -73,12 +77,17 @@ $(document).ready(function () {
         return answer;
     }
 
+    //COPY PASSWORD TO CLIPBOARD
+    $("#password").click(function (e) {
 
-
-
-
-
-
-
+        this.focus();
+        this.select();
+        try {  
+            var successful = document.execCommand('copy');  
+        } catch(err) {  
+            console.error('Unable to copy'); 
+        }		
+        alert("Copied!");
+    });
 
 });
