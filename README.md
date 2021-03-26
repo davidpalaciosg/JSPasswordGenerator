@@ -6,4 +6,5 @@ Password Generator built with:
 4) Bootstrap 4
 
 Live Preview: https://davidpalaciosg.com/proyectos/JS-Password-Generator/
+
 Webpage: https://davidpalaciosg.com/
