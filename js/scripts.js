@@ -7,6 +7,10 @@ $(document).ready(function () {
     
     //CLICK ON SUBMIT
     $("#send-button").click(function (e) {
+
+        //Hide alert if present
+        $("#copied-alert").css( "display", "none");
+
         e.preventDefault();
         var string = "";
         let numchecked = false;
@@ -38,12 +42,16 @@ $(document).ready(function () {
 
             //Build password
             let password = buildPassword(string, quantity);
+
+            //Hide no option alert if present
+            $("#alert-no-option").css( "display", "none");
+
             //Show password
             $("#password-div").css("display", "block");
             $("#password").val(password);
         }
         else{
-            alert("Select at least one option!");
+           $("#alert-no-option").css( "display", "block");
         }
     });
 
@@ -87,7 +95,7 @@ $(document).ready(function () {
         } catch(err) {  
             console.error('Unable to copy'); 
         }		
-        alert("Copied!");
+        $("#copied-alert").css("display", "block");
     });
 
 });
